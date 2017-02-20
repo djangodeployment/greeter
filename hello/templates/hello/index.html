@@ -2,6 +2,12 @@
 {% load static %}
 
 {% block content %}
-<img src="{% static 'hello.jpg' %}">
-<p>Hello, {{ greetee }}!</p>
+<div class="container">
+  <p>Hello, {{ greetee.name }}!</p>
+  {% if greetee.image %}
+    <img width="200" height="200" src="{{ greetee.image.url }}">
+  {% else %}
+    <img width="200" height="200" src="{% static 'hello.jpg' %}">
+  {% endif %}
+</div>
 {% endblock %}

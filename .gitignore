@@ -90,3 +90,4 @@ ENV/
 
 # Custom stuff
 db.sqlite3
+media

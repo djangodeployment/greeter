@@ -9,6 +9,6 @@ def home(request):
     try:
         greetee = random.choice(Greetee.objects.all()[:])
     except IndexError:
-        greetee = 'world'
+        greetee = Greetee(name='world')
     context = {'greetee': greetee}
     return render(request, 'hello/index.html', context)

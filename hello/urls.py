@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from hello.views import home
+from . import views
 
 urlpatterns = [
-    url(r'^$', home, name='Home'),
+    url(r'^$', views.home, name='Home'),
 ]

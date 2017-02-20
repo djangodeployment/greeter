@@ -1,0 +1,19 @@
+div.container {
+    position: relative;
+}
+div.container p {
+    margin: 0;
+    font-size: large;
+    border: 1px solid maroon;
+    background-color: lightyellow;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+div.container img {
+    margin-left: auto;
+    margin-right: auto;
+}
