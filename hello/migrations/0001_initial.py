@@ -13,9 +13,23 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Greetee',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('name', models.CharField(max_length=25)),
-                ('image', models.ImageField(blank=True, null=True, upload_to='uploads')),
+                ('image', models.ImageField(upload_to='uploads', blank=True, null=True)),
             ],
+            options={
+                'ordering': ['name'],
+            },
+        ),
+        migrations.CreateModel(
+            name='VisitorLog',
+            fields=[
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
+                ('timestamp', models.DateTimeField(auto_now_add=True)),
+                ('greetee', models.ForeignKey(blank=True, to='hello.Greetee', null=True)),
+            ],
+            options={
+                'ordering': ['timestamp'],
+            },
         ),
     ]
