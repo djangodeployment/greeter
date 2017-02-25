@@ -12,6 +12,6 @@ def home(request):
     except IndexError:
         greetee = Greetee(name='world')
     if getattr(settings, 'GREETER_LOG', False):
-        VisitorLog(greetee=greetee).save()
+        VisitorLog(greetee=None if greetee.id is None else greetee).save()
     context = {'greetee': greetee}
     return render(request, 'hello/index.html', context)
