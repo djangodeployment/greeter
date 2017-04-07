@@ -19,4 +19,9 @@ a way to have the app write to the database on each request in order to
 experiment with how much this affects the number of requests it can
 serve.
 
+© 2017 Antonis Christofides
+
+To the extent possible under law, I hereby waive all copyright and
+related or neighboring rights to Greeter.
+
 .. _deployment webinar: https://www.crowdcast.io/e/deploying-django/
